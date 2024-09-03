@@ -7,7 +7,8 @@
 
 import UIKit
 
-class HomeViewController: UIViewController {
+class ViewController: UIViewController {
+    
     
     static let obesityAdvice = "https://www.teknon.es/es/especialidades/gonzalbez-morgaez-jose/dietetica-obesidad/recomendaciones-pacientes-obesidad"
     
@@ -98,7 +99,7 @@ class HomeViewController: UIViewController {
             title: "Ver recomendaciones",
             style: UIAlertAction.Style.cancel,
             handler: { action in
-                if let url = URL(string: HomeViewController.obesityAdvice), UIApplication.shared.canOpenURL(url) {
+                if let url = URL(string: ViewController.obesityAdvice), UIApplication.shared.canOpenURL(url) {
                     UIApplication.shared.open(url)
                 }
             })

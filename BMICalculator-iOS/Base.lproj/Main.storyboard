@@ -18,7 +18,7 @@
                         <subviews>
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="vEx-G5-fSp" userLabel="Container View">
                                 <rect key="frame" x="0.0" y="59" width="393" height="759"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <autoresizingMask key="autoresizingMask"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="WIr-9k-Z1W" userLabel="HeightView">
                                         <rect key="frame" x="8" y="0.0" width="377" height="128"/>
@@ -39,9 +39,12 @@
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" maximumValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="Dz7-oJ-cQb" userLabel="Height Stepper">
+                                            <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="160" minimumValue="10" maximumValue="300" translatesAutoresizingMaskIntoConstraints="NO" id="Dz7-oJ-cQb" userLabel="Height Stepper">
                                                 <rect key="frame" x="275" y="20" width="94" height="32"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <connections>
+                                                    <action selector="onHeightChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="oeP-ka-flq"/>
+                                                </connections>
                                             </stepper>
                                         </subviews>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -65,10 +68,13 @@
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="slG-j9-zFT" userLabel="Weight Slider">
+                                            <slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="78" minValue="10" maxValue="300" translatesAutoresizingMaskIntoConstraints="NO" id="slG-j9-zFT" userLabel="Weight Slider">
                                                 <rect key="frame" x="6" y="99" width="365" height="30"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <color key="tintColor" systemColor="systemYellowColor"/>
+                                                <connections>
+                                                    <action selector="onWeightChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="eUA-21-xQf"/>
+                                                </connections>
                                             </slider>
                                         </subviews>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -105,6 +111,9 @@
                                                 <color key="backgroundColor" systemColor="systemYellowColor"/>
                                             </backgroundConfiguration>
                                         </buttonConfiguration>
+                                        <connections>
+                                            <action selector="calculate:" destination="BYZ-38-t0r" eventType="touchUpInside" id="dOi-lt-dGm"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -113,6 +122,14 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
+                    <connections>
+                        <outlet property="descriptionLabel" destination="2NZ-XO-dHm" id="Zum-A1-VCV"/>
+                        <outlet property="heightLabel" destination="RiN-Ik-JzA" id="rtr-RB-fMW"/>
+                        <outlet property="heightStepper" destination="Dz7-oJ-cQb" id="X0Q-sB-ZVk"/>
+                        <outlet property="resultLabel" destination="zit-QP-gM4" id="6jt-EY-C4q"/>
+                        <outlet property="weightLabel" destination="5pG-m2-Jos" id="4wm-4v-ued"/>
+                        <outlet property="weightSlider" destination="slG-j9-zFT" id="Eb8-kp-F80"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
