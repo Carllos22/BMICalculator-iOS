@@ -16,9 +16,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="vEx-G5-fSp" userLabel="Container View">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vEx-G5-fSp" userLabel="Container View">
                                 <rect key="frame" x="0.0" y="59" width="393" height="759"/>
-                                <autoresizingMask key="autoresizingMask"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="WIr-9k-Z1W" userLabel="HeightView">
                                         <rect key="frame" x="8" y="0.0" width="377" height="128"/>
@@ -121,6 +120,12 @@
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="vEx-G5-fSp" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="6od-b4-zOO"/>
+                            <constraint firstItem="vEx-G5-fSp" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="AXb-8c-Kek"/>
+                            <constraint firstItem="vEx-G5-fSp" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="dCb-5C-s9T"/>
+                            <constraint firstItem="vEx-G5-fSp" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="yAm-Y0-oW8"/>
+                        </constraints>
                     </view>
                     <connections>
                         <outlet property="descriptionLabel" destination="2NZ-XO-dHm" id="Zum-A1-VCV"/>
